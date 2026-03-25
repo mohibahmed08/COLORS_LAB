@@ -1,0 +1,20 @@
+@startuml
+
+class User {
+  -ID : int
+  -firstName : string
+  -lastName : string
+  +login()
+  +logout()
+}
+
+class Color {
+  -Name : string
+  -UserId : int
+  +addColor()
+  +searchColor()
+}
+
+User "1" -- "*" Color : owns
+
+@enduml

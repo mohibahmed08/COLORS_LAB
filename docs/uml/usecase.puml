@@ -1,0 +1,9 @@
+@startuml
+actor User
+
+User --> (Login)
+User --> (Logout)
+User --> (Add Color)
+User --> (Search Colors)
+
+@enduml

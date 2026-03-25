@@ -1,0 +1,25 @@
+@startuml
+start
+
+:Enter login & password;
+:Send request;
+
+if (Valid?) then (Yes)
+  :Save cookie;
+
+  :Choose action;
+
+  if (Add Color) then (Yes)
+    :Enter color;
+    :Send AddColor request;
+  else (Search Colors)
+    :Enter search;
+    :Send SearchColors request;
+  endif
+
+else (No)
+  :Show error message;
+endif
+
+stop
+@enduml

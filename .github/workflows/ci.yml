@@ -1,11 +1,11 @@
-name: CI Lint
+name: CI Lint and Tests
 
 on:
   push:
   pull_request:
 
 jobs:
-  lint:
+  lint-and-test:
     runs-on: ubuntu-latest
 
     steps:
@@ -20,5 +20,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run all lint checks
+      - name: Run lint checks
         run: npm run lint
+
+      - name: Run tests
+        run: npm test

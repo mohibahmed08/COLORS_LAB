@@ -5,12 +5,15 @@
   "scripts": {
     "lint:html": "htmlhint \"public/**/*.html\"",
     "lint:css": "stylelint \"public/css/**/*.css\"",
-    "lint:js": "eslint \"public/js/code.js\"",
-    "lint": "npm run lint:html && npm run lint:css && npm run lint:js"
+    "lint:js": "eslint \"public/js/code.js\" \"public/js/testable.js\"",
+    "lint": "npm run lint:html && npm run lint:css && npm run lint:js",
+    "test": "jest"
   },
   "devDependencies": {
     "eslint": "^9.10.0",
+    "globals": "^17.5.0",
     "htmlhint": "^1.1.4",
+    "jest": "^30.0.0",
     "stylelint": "^16.8.2",
     "stylelint-config-standard": "^36.0.1"
   }
